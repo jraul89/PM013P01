@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class ActivityPrinc extends AppCompatActivity {
-    Button btnadd, btnlist, btncombo;
+    Button btnadd, btnlist, btncombo, btnimagecapture;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -21,6 +21,7 @@ public class ActivityPrinc extends AppCompatActivity {
         btnadd = (Button) findViewById(R.id.btnadd);
         btnlist = (Button) findViewById(R.id.btnlist);
         btncombo = (Button) findViewById(R.id.btncombo);
+        btnimagecapture = (Button) findViewById(R.id.btnimagecapture);
 
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,15 @@ public class ActivityPrinc extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ActivityCombo.class);
+                startActivity(intent);
+            }
+        });
+
+
+        btnimagecapture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ActivityFoto.class);
                 startActivity(intent);
             }
         });
