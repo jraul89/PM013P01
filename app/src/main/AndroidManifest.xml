@@ -3,14 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature
         android:name="android.hardware.Camera"
         android:required="true" />
     <uses-feature
         android:name="android.hardware.camera2"
-        android:required="true"/>
+        android:required="true" />
 
     <queries>
+
         <!-- Browser -->
         <intent>
             <action android:name="android.intent.action.VIEW" />
@@ -27,8 +29,7 @@
         <intent>
             <action android:name="android.intent.action.GET_CONTENT" />
         </intent>
-        </queries>
-
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -40,6 +41,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PM013P01"
         tools:targetApi="31">
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".ActivityFoto"
             android:exported="false">
@@ -90,7 +98,6 @@
                 android:value="" />
         </activity>
 
-
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.android.fileprovider"
@@ -100,7 +107,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_path" />
         </provider>
-
     </application>
 
 </manifest>
